@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Education - Portfolio{% endblock %}
+
+{% block content %}
+<h1 class="mb-5">Education</h1>
+
+<div class="row">
+    {% for edu in education %}
+    <div class="col-12 mb-5 education-item">
+        <div class="ms-3">
+            <h2 class="h4">{{ edu.institution }}</h2>
+            <h3 class="h5">{{ edu.degree }}</h3>
+            <p class="text-muted">{{ edu.date }}</p>
+            {% if edu.gpa %}
+            <p>{{ edu.gpa }}</p>
+            {% endif %}
+            {% if edu.coursework %}
+            <p>{{ edu.coursework }}</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,99 @@
+{
+  "personal_info": {
+    "name": "Mayur Mahavir Bijarniya",
+    "headline": "Product Designer & Data Analyst",
+    "bio": "A combination of product thinking, analytical insight, and user-first design — turned into real solutions through thoughtful execution and teamwork.",
+    "description": "From AI research tools to sustainability platforms and analytics-driven insights, I love solving real problems at the intersection of tech, business, and design. I'm currently exploring Summer 2025 opportunities in product, project, and data roles.",
+    "image_path": "/static/img/profile.jpg"
+  },
+  "projects": [
+    {
+      "id": "nexus-ai",
+      "title": "Nexus AI — Academic Publishing Platform",
+      "description": "An AI-powered platform to streamline academic research from literature reviews to citation formatting and journal suggestions.",
+      "image_path": "/static/img/nexus-ai.jpg",
+      "metrics": [
+        {"name": "Engagement", "value": "50%"},
+        {"name": "Journal Acceptance Rate", "value": "↑30—50%"}
+      ],
+      "details": "Full project details would go here..."
+    },
+    {
+      "id": "huskyshare",
+      "title": "HuskyShare — Campus Sustainability App",
+      "description": "A peer-to-peer platform to exchange resources and reduce waste among students, improving sustainability on campus.",
+      "image_path": "/static/img/huskyshare.jpg",
+      "metrics": [
+        {"name": "Item Discoverability", "value": "+40%"},
+        {"name": "Exchange Efficiency", "value": "+30%"}
+      ],
+      "details": "Full project details would go here..."
+    },
+    {
+      "id": "premier-league",
+      "title": "Premier League Timekeeping Analysis",
+      "description": "Analysed 1140+ matches to uncover the impact of new stoppage time rules on goals, injuries, and match dynamics.",
+      "image_path": "/static/img/premier-league.jpg",
+      "metrics": [
+        {"name": "Late-Game Goals", "value": "3.27 avg"},
+        {"name": "Substitutions", "value": "+0.53 avg"}
+      ],
+      "details": "Full project details would go here..."
+    },
+    {
+      "id": "unicircle",
+      "title": "UniCircle — Student Social Network",
+      "description": "A campus-based social platform for student connections, personalized event discovery, and interest-based reconnections.",
+      "image_path": "/static/img/unicircle.jpg",
+      "metrics": [
+        {"name": "User Engagement (est.)", "value": "↑35%"},
+        {"name": "Event Discoverability", "value": "+40%"}
+      ],
+      "details": "Full project details would go here..."
+    }
+  ],
+  "skills": {
+    "analysis": ["Competitor Analysis", "A/B Testing", "Market Research", "UI/UX Design Thinking", "Wireframing", "SWOT Analysis", "User Stories"],
+    "data_analytics": ["Data Visualization", "KPI Tracking", "Data-Driven Decision Making"],
+    "technical": ["Python", "R", "SQL", "JIRA", "MS Project", "Workfront", "BPMN 2.0", "Smartsheet", "Asana", "SharePoint", "Figma", "Framer", "Canva", "Tableau", "Power BI", "Google Data Studio", "Advanced Microsoft Excel", "Adobe Analytics", "Minitab"]
+  },
+  "achievements": [
+    {
+      "title": "Top 5 Finalist - Nexus AI",
+      "event": "Protothon 7.0 Hackathon",
+      "organization": "Northeastern University",
+      "date": "Feb 2025 - Mar 2025",
+      "description": "Developed an AI-powered academic research tool that automates literature reviews, citation formatting, and journal recommendations. Led product strategy and UX, helping the team place in the top 5 out of 75+ teams."
+    },
+    {
+      "title": "Presenter - HuskyShare",
+      "event": "Sustainability Innovation Week Expo",
+      "organization": "Northeastern University",
+      "date": "Mar 2025",
+      "description": "Showcased a peer-to-peer campus exchange platform designed to reduce student waste. Presented platform impact and behavioral insights to university faculty, industry professionals, and sustainability advocates."
+    },
+    {
+      "title": "Club Product Manager",
+      "event": "Aspiring Product Managers Club",
+      "organization": "Northeastern University",
+      "date": "Jan 2025 - Present",
+      "description": "Led weekly case study breakdowns on product strategy, UX decisions, and market research. Organized speaker sessions, mock PM interviews, and built a community of aspiring product thinkers."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Northeastern University, Boston, MA",
+      "degree": "Master of Science in Engineering Management",
+      "date": "Expected Dec 2026",
+      "gpa": "GPA: (3.7/4.0)",
+      "coursework": "Relevant Coursework: Digital Product Design and Management, Project Management, Operations Research, Probability and Statistics"
+    },
+    {
+      "institution": "Lovely Professional University, Punjab, India",
+      "degree": "Bachelor of Technology in Computer Science and Engineering (with Honors)",
+      "date": "Aug 2020 - May 2024",
+      "gpa": "",
+      "coursework": ""
+    }
+  ]
+}

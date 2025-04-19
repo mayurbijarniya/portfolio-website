@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}{{ data.personal_info.name }} - Portfolio{% endblock %}
+
+{% block content %}
+<div class="row align-items-center mb-5">
+    <div class="col-md-8 text-center text-md-start">
+        <h1 class="display-4 fw-bold">Hey, I'm {{ data.personal_info.name }} — and here's a look at what I build.</h1>
+        <p class="lead mt-4">{{ data.personal_info.bio }}</p>
+        <p>{{ data.personal_info.description }}</p>
+    </div>
+    <div class="col-md-4 text-center">
+        <img src="{{ data.personal_info.image_path }}" alt="{{ data.personal_info.name }}" class="rounded-circle img-fluid profile-image" style="max-width: 200px;">
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-12">
+        <h2 class="mb-4">Featured Projects</h2>
+    </div>
+</div>
+
+<!-- Featured Projects -->
+{% for project in data.projects %}
+<div class="card mb-5 project-card {% if loop.index is odd %}bg-light{% else %}bg-light-accent{% endif %}">
+    <div class="row g-0">
+        <div class="col-md-7 {% if loop.index is even %}order-md-2{% endif %}">
+            <div class="card-body p-4">
+                <h3 class="card-title">{{ project.title }}</h3>
+                <p class="card-text">{{ project.description }}</p>
+                
+                <!-- Project Metrics -->
+                <div class="row mt-4">
+                    {% for metric in project.metrics %}
+                    <div class="col-md-6 mb-3">
+                        <p class="small text-muted mb-1">{{ metric.name }}</p>
+                        <h4 class="fw-bold">{{ metric.value }}</h4>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <a href="{{ url_for('project_detail', project_id=project.id) }}" class="btn btn-dark mt-3">View project</a>
+            </div>
+        </div>
+        <div class="col-md-5 {% if loop.index is even %}order-md-1{% endif %}">
+            <img src="{{ project.image_path }}" class="img-fluid rounded-start h-100" alt="{{ project.title }}">
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<div class="text-center mt-4 mb-5">
+    <a href="{{ url_for('projects') }}" class="btn btn-outline-dark">View All Projects</a>
+</div>
+
+<!-- Skills Section -->
+<div class="row mt-5">
+    <div class="col-12">
+        <h2 class="mb-4">My Skills</h2>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Analysis Skills -->
+    <div class="col-md-4 mb-4">
+        <h3 class="h5">Product & Design</h3>
+        <div class="skill-tags">
+            {% for skill in data.skills.analysis %}
+            <span class="badge bg-secondary me-2 mb-2 p-2">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Data & Business Analytics -->
+    <div class="col-md-4 mb-4">
+        <h3 class="h5">Data & Business Analytics</h3>
+        <div class="skill-tags">
+            {% for skill in data.skills.data_analytics %}
+            <span class="badge bg-secondary me-2 mb-2 p-2">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Technical & Tools -->
+    <div class="col-md-4 mb-4">
+        <h3 class="h5">Technical & Tools</h3>
+        <div class="skill-tags">
+            {% for skill in data.skills.technical %}
+            <span class="badge bg-secondary me-2 mb-2 p-2">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-4 mb-5">
+    <a href="{{ url_for('skills') }}" class="btn btn-outline-dark">See All Skills</a>
+</div>
+
+<!-- Achievements Section Preview -->
+<div class="row mt-5">
+    <div class="col-12">
+        <h2 class="mb-4">Highlights</h2>
+    </div>
+</div>
+
+<div class="row">
+    {% for achievement in data.achievements[:2] %}
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3 class="h5">{{ achievement.title }}</h3>
+                <h4 class="h6 text-muted">{{ achievement.event }}</h4>
+                <p class="small text-muted">{{ achievement.organization }} • {{ achievement.date }}</p>
+                <p>{{ achievement.description }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="text-center mt-4 mb-5">
+    <a href="{{ url_for('achievements') }}" class="btn btn-outline-dark">View All Achievements</a>
+</div>
+{% endblock %}

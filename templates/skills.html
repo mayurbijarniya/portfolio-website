@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Skills - Portfolio{% endblock %}
+
+{% block content %}
+<h1 class="mb-5">Skills & Expertise</h1>
+
+<!-- Analysis Skills -->
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="h4 mb-4">Product & Design</h2>
+        <div class="skill-tags">
+            {% for skill in skills.analysis %}
+            <span class="badge bg-secondary me-2 mb-3 p-3">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Data & Business Analytics -->
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="h4 mb-4">Data & Business Analytics</h2>
+        <div class="skill-tags">
+            {% for skill in skills.data_analytics %}
+            <span class="badge bg-secondary me-2 mb-3 p-3">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Technical & Tools -->
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="h4 mb-4">Technical & Tools</h2>
+        <div class="skill-tags">
+            {% for skill in skills.technical %}
+            <span class="badge bg-secondary me-2 mb-3 p-3">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

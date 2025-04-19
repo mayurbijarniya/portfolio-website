@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Resume - Portfolio{% endblock %}
+
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="mb-4">Resume</h1>
+    <a href="{{ url_for('static', filename='Final_Resume_Mayur_Bijarniya.pdf') }}" class="btn btn-dark" download>
+        <i class="fas fa-download me-2"></i> Download PDF
+    </a>
+</div>
+
+<!-- Personal Info -->
+<h2>{{ data.personal_info.name }}</h2>
+<p>{{ data.personal_info.headline }}</p>
+<p>{{ data.personal_info.bio }}</p>
+
+<!-- Education -->
+<h3 class="mt-4">Education</h3>
+{% for edu in data.education %}
+    <div class="mb-3">
+        <strong>{{ edu.institution }}</strong><br>
+        {{ edu.degree }} ({{ edu.date }})<br>
+        {% if edu.gpa %}GPA: {{ edu.gpa }}<br>{% endif %}
+        {% if edu.coursework %}
+            <em>Relevant Coursework:</em> {{ edu.coursework | join(', ') }}
+        {% endif %}
+    </div>
+{% endfor %}
+
+<!-- Skills -->
+<h3 class="mt-4">Skills</h3>
+{% for category, skills in data.skills.items() %}
+    <h5>{{ category }}</h5>
+    <ul>
+        {% for skill in skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+
+<!-- Projects -->
+<h3 class="mt-4">Projects</h3>
+{% for project in data.projects %}
+    <div class="mb-4">
+        <strong>{{ project.title }}</strong> – {{ project.role }}<br>
+        <small>{{ project.location }} | {{ project.date }}</small>
+        <ul>
+            {% for item in project.description %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endfor %}
+
+<!-- Achievements -->
+<h3 class="mt-4">Achievements</h3>
+<ul>
+    {% for achievement in data.achievements %}
+        <li>{{ achievement }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

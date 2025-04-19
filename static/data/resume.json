@@ -1,0 +1,125 @@
+{
+    "personal_info": {
+        "name": "Mayur Mahavir Bijarniya",
+        "headline": "Product Manager | Data Analyst | Engineering Management Graduate Student",
+        "bio": "Boston, MA | (857) 880-6152 | bijarniya.m@northeastern.edu | linkedin.com/in/mayur-bijarniya/"
+    },
+    "education": [
+        {
+            "institution": "Northeastern University, Boston, MA",
+            "degree": "Master of Science in Engineering Management",
+            "date": "Expected Dec 2026",
+            "gpa": "3.7/4.0",
+            "coursework": [
+                "Digital Product Design and Management",
+                "Project Management",
+                "Operations Research",
+                "Probability and Statistics"
+            ]
+        },
+        {
+            "institution": "Lovely Professional University, Punjab, India",
+            "degree": "Bachelor of Technology in Computer Science and Engineering (with Honors)",
+            "date": "Aug 2020 - May 2024"
+        }
+    ],
+    "skills": {
+        "Product & Project Management": [
+            "Product Strategy",
+            "End-to-End Product Lifecycle",
+            "Agile Methodology",
+            "Sprint Planning",
+            "Roadmap Development",
+            "Cross-Functional Collaboration"
+        ],
+        "Market & UX Research": [
+            "Competitor Analysis",
+            "A/B Testing",
+            "Market Research",
+            "UI/UX Design Thinking",
+            "Wireframing",
+            "SWOT Analysis",
+            "User Stories"
+        ],
+        "Data & Business Analytics": [
+            "Data Visualization",
+            "KPI Tracking",
+            "Data-Driven Decision Making"
+        ],
+        "Technical & Tools": [
+            "Python",
+            "R",
+            "SQL",
+            "JIRA",
+            "MS Project",
+            "Workfront",
+            "BPMN 2.0",
+            "Smartsheet",
+            "Asana",
+            "SharePoint",
+            "Figma",
+            "Canva",
+            "Tableau",
+            "Power BI",
+            "Google Data Studio",
+            "Advanced Microsoft Excel",
+            "Adobe Analytics",
+            "Minitab"
+        ]
+    },
+    "projects": [
+        {
+            "title": "Nexus AI \u2013 AI-Powered Academic Publishing Platform",
+            "role": "Product Manager, UI/UX Designer",
+            "location": "Boston, MA",
+            "date": "Feb 2025 - Mar 2025",
+            "description": [
+                "Engineered an AI platform automating research workflows including literature reviews, citation formatting, and plagiarism checks.",
+                "Outlined roadmap, KPIs, and user requirements based on stakeholder interviews and academic pain points.",
+                "Led cross-functional delivery through agile sprints in JIRA; documented specs for timely development.",
+                "Formulated go-to-market strategy in a $112B AI-education market, projecting 30\u201350% efficiency gains."
+            ]
+        },
+        {
+            "title": "HuskyShare \u2013 Resource Reuse & Sustainability Initiative",
+            "role": "Project Manager, UI/UX Designer",
+            "location": "Boston, MA",
+            "date": "Jan 2025 - Mar 2025",
+            "description": [
+                "Developed a peer-to-peer student exchange platform to reduce over 640 lbs of campus waste per student annually.",
+                "Designed robust AI-based search and intelligent matching systems, increasing item discoverability by over 40%.",
+                "Applied deep behavioral analytics and usage pattern insights to optimize UX and reduce exchange time by 25%.",
+                "Managed full project scope, WBS, sprint scheduling, and multi-team risk using MS Project and Smartsheet."
+            ]
+        },
+        {
+            "title": "UniCircle \u2013 Campus-Based Social Networking App",
+            "role": "Product Manager, UX Strategist",
+            "location": "Boston, MA",
+            "date": "Jan 2025 \u2013 Mar 2025",
+            "description": [
+                "Conceptualized a student-exclusive networking platform addressing social connectivity challenges identified through analysis of 25+ stakeholder interviews.",
+                "Synthesized qualitative research revealing key pain points: 40% of students struggled with initial connections.",
+                "Created detailed PRD with interactive wireframes, connection strength metrics, and conversation starters aligned with stakeholder requirements.",
+                "Formulated phased roadmap with defined resource requirements and success metrics for platform launch."
+            ]
+        },
+        {
+            "title": "Impact of New Timekeeping Rules on Premier League",
+            "role": "Data Analyst",
+            "location": "Boston, MA",
+            "date": "Sep 2024 - Dec 2024",
+            "description": [
+                "Analyzed over 1,140 historical EPL matches (2021\u20132024) using Python and R to study stoppage time rule effects.",
+                "Identified post-regulation shifts including a 3.27 avg increase in late goals and 0.53 avg rise in substitutions.",
+                "Validated statistical significance through regression models and A/B testing; visualized results with R and Excel.",
+                "Shared data-driven insights and performance metrics influencing league-wide discussions on rule change efficacy."
+            ]
+        }
+    ],
+    "achievements": [
+        "Top 5 Finalist (out of 75+ teams), Protothon 7.0 Hackathon \u2013 Recognized for developing Nexus AI.",
+        "Presenter, Sustainability Innovation Week Expo \u2013 Showcased HuskyShare\u2019s impact to academic and industry professionals.",
+        "Product Manager \u2013 Aspiring Product Managers Club \u2013 Led case study discussions, organized workshops and networking events."
+    ]
+}

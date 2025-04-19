@@ -1,0 +1,846 @@
+/* --- Theme Variables --- */
+:root {
+    /* Light Theme (Based on your original styles) */
+    --body-text-light: #333;
+    --heading-text-light: #333; /* Same as body text in your original */
+    --body-bg-light: linear-gradient(-45deg, #f8f9fa, #f0f7ff, #f5f5f0, #fff5e6);
+    --navbar-link-light: #333;
+    --navbar-link-hover-light: #000;
+    --navbar-link-active-light: #000;
+    --navbar-link-active-after-light: #333;
+    --navbar-scrolled-bg-light: rgba(255, 255, 255, 0.8);
+    --profile-image-border-light: #fff;
+    --project-card-shadow-light: rgba(0, 0, 0, 0.03);
+    --project-card-hover-shadow-light: rgba(0, 0, 0, 0.08);
+    --project-card-text-light: rgba(0, 0, 0, 0.7);
+    --project-card-btn-border-light: rgba(0, 0, 0, 0.2);
+    --project-card-btn-hover-bg-light: rgba(0, 0, 0, 0.1);
+    --metric-value-light: #333;
+    --metric-hover-light: #007bff;
+    --metrics-card-shadow-light: rgba(0, 0, 0, 0.05);
+    --badge-bg-light: #6c757d; /* Default Bootstrap badge color */
+    --badge-hover-bg-light: #007bff;
+    --achievement-card-shadow-light: rgba(0, 0, 0, 0.05);
+    --achievement-card-hover-shadow-light: rgba(0, 0, 0, 0.1);
+    --education-item-before-bg-light: #f0f0f0;
+    --education-item-hover-before-bg-light: #007bff;
+    --btn-dark-bg-light: #333;
+    --btn-dark-hover-bg-light: #222;
+    --btn-outline-dark-border-light: #333;
+    --btn-outline-dark-text-light: #333;
+    --btn-outline-dark-hover-bg-light: #333;
+    --btn-outline-dark-hover-text-light: white;
+    --footer-bg-light: rgba(33, 33, 33, 0.95);
+    --footer-text-light: rgba(255, 255, 255, 0.7); /* Assuming light text on dark footer */
+    --footer-link-hover-light: #f8f9fa;
+    --loading-bg-light: #fff;
+    --loading-spinner-light: #333;
+    --bg-light-color: #f8f9fa; /* For .bg-light */
+    --bg-light-accent-color: #f0f7ff; /* For .bg-light-accent */
+    --default-card-bg-light: #ffffff; /* Default card bg if not overridden by nth-child */
+     /* Specific project card backgrounds (Light) */
+    --project-card-1-bg-light: #e8f5e9;
+    --project-card-2-bg-light: #fff3e0;
+    --project-card-3-bg-light: #f3e5f5;
+    --project-card-4-bg-light: #e1f5fe;
+
+    /* Dark Theme */
+    --body-text-dark: #e0e0e0;
+    --heading-text-dark: #f5f5f5;
+    --body-bg-dark: #121212; /* Simple dark background for dark mode */
+    --navbar-link-dark: #e0e0e0;
+    --navbar-link-hover-dark: #ffffff;
+    --navbar-link-active-dark: #ffffff;
+    --navbar-link-active-after-dark: #e0e0e0;
+    --navbar-scrolled-bg-dark: rgba(33, 37, 41, 0.8); /* Dark semi-transparent */
+    --profile-image-border-dark: #444;
+    --project-card-bg-dark: #1e1e1e; /* Consistent dark bg for cards */
+    --project-card-shadow-dark: rgba(255, 255, 255, 0.05);
+    --project-card-hover-shadow-dark: rgba(255, 255, 255, 0.1);
+    --project-card-text-dark: rgba(255, 255, 255, 0.7);
+    --project-card-btn-border-dark: rgba(255, 255, 255, 0.3);
+    --project-card-btn-hover-bg-dark: rgba(255, 255, 255, 0.1);
+    --metric-value-dark: #f5f5f5;
+    --metric-hover-dark: #80bdff; /* Lighter blue */
+    --metrics-card-shadow-dark: rgba(255, 255, 255, 0.08);
+    --badge-bg-dark: #555;
+    --badge-hover-bg-dark: #80bdff;
+    --achievement-card-bg-dark: #2a2a2a;
+    --achievement-card-shadow-dark: rgba(255, 255, 255, 0.08);
+    --achievement-card-hover-shadow-dark: rgba(255, 255, 255, 0.15);
+    --education-item-before-bg-dark: #444;
+    --education-item-hover-before-bg-dark: #80bdff;
+    --btn-dark-bg-dark: #bbb; /* Lighter buttons for dark mode */
+    --btn-dark-text-dark: #121212; /* Dark text on light button */
+    --btn-dark-hover-bg-dark: #ddd;
+    --btn-outline-dark-border-dark: #bbb;
+    --btn-outline-dark-text-dark: #bbb;
+    --btn-outline-dark-hover-bg-dark: #bbb;
+    --btn-outline-dark-hover-text-dark: #121212;
+    --footer-bg-dark: rgba(18, 18, 18, 0.95); /* Slightly different footer dark */
+    --footer-text-dark: rgba(255, 255, 255, 0.6);
+    --footer-link-hover-dark: #ffffff;
+    --loading-bg-dark: #121212;
+    --loading-spinner-dark: #ddd;
+    --bg-light-color-in-dark: #2a2a2a; /* What .bg-light becomes in dark mode */
+    --bg-light-accent-color-in-dark: #333; /* What .bg-light-accent becomes in dark mode */
+    --default-card-bg-dark: #1e1e1e;
+}
+
+/* Basic Styling */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--body-text-light);
+    line-height: 1.6;
+    background: var(--body-bg-light);
+    background-size: 400% 400%;
+    animation: gradient 25s ease infinite;
+    min-height: 100vh;
+    transition: background 0.4s ease, color 0.4s ease; /* Added transition */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Subtle grain texture overlay - Kept as is, might need adjustment for dark mode visibility */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYl/f39ra2uRkZGZmZlpaWmXl5dvb29xcXGTk5NnZ2c8TV1mAAAAG3RSTlNAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAvEOwtAAAFVklEQVR4XpWWB67c2BUFb3g557T/hRo9/WUMZHlgr4Bg8Z4qQgQJlHI4A8SzFVrapvmTF9O7dmYRFZ60YiBhJRCgh1FYhiLAmdvX0CzTOpNE77ME0Zty/nWWzchDtiqrmQDeuv3powQ5ta2eN0FY0InkqDD73lT9c9lEzwUNqgFHs9VQce3TVClFCQrSTfOiYkVJQBmpbq2L6iZavPnAPcoU0dSw0SUTqz/GtrGuXfbyyBniKykOWQWGqwwMA7QiYAxi+IlPdqo+hYHnUt5ZPfnsHJyNiDtnpJyayNBkF6cWoYGAMY92U2hXHF/C1M8uP/ZtYdiuj26UdAdQQSXQErwSOMzt/XWRWAz5GuSBIkwG1H3FabJ2OsUOUhGC6tK4EMtJO0ttC6IBD3kM0ve0tJwMdSfjZo+EEISaeTr9P3wYrGjXqyC1krcKdhMpxEnt5JetoulscpyzhXN5FRpuPHvbeQaKxFAEB6EN+cYN6xD7RYGpXpNndMmZgM5Dcs3YSNFDHUo2LGfZuukSWyUYirJAdYbF3MfqEKmjM+I2EfhA94iG3L7uKrR+GdWD73ydlIB+6hgref1QTlmgmbM3/LeX5GI1Ux1RWpgxpLuZ2+I+IjzZ8wqE4nilvQdkUdfhzI5QDWy+kw5Wgg2pGpeEVeCCA7b85BO3F9DzxB3cdqvBzWcmzbyMiqhzuYqtHRVG2y4x+KOlnyqla8AoWWpuBoYRxzXrfKuILl6SfiWCbjxoZJUaCBj1CjH7GIaDbc9kqBY3W/Rgjda1iqQcOJu2WW+76pZC9QG7M00dffe9hNnseupFL53r8F7YHSwJWUKP2q+k7RdsxyOB11n0xtOvnW4irMMFNV4H0uqwS5ExsmP9AxbDTc9JwgneAT5vTiUSm1E7BSflSt3bfa1tv8Di3R8n3Af7MNWzs49hmauE2wP+ttrq+AsWpFG2awvsuOqbipWHgtuvuaAE+A1Z/7gC9hesnr+7wqCwG8c5yAg3AL1fm8T9AZtp/bbJGwl1pNrE7RuOX7PeMRUERVaPpEs+yqeoSmuOlokqw49pgomjLeh7icHNlG19yjs6XXOMedYm5xH2YxpV2tc0Ro2jJfxC50ApuxGob7lMsxfTbeUv07TyYxpeLucEH1gNd4IKH2LAg5TdVhlCafZvpskfncCfx8pOhJzd76bJWeYFnFciwcYfubRc12Ip/ppIhA1/mSZ/RxjFDrJC5xifFjJpY2Xl5zXdguFqYyTR1zSp1Y9p+tktDYYSNflcxI0iyO4TPBdlRcpeqjK/piF5bklq77VSEaA+z8qmJTFzIWiitbnzR794USKBUaT0NTEsVjZqLaFVqJoPN9ODG70IPbfBHKK+/q/AWR0tJzYHRULOa4MP+W/HfGadZUbfw177G7j/OGbIs8TahLyynl4X4RinF793Oz+BU0saXtUHrVBFT/DnA3ctNPoGbs4hRIjTok8i+algT1lTHi4SxFvONKNrgQFAq2/gFnWMXgwffgYMJpiKYkmW3tTg3ZQ9Jq+f8XN+A5eeUKHWvJWJ2sgJ1Sop+wwhqFVijqWaJhwtD8MNlSBeWNNWTa5Z5kPZw5+LbVT99wqTdx29lMUH4OIG/D86ruKEauBjvH5xy6um/Sfj7ei6UUVk4AIl3MyD4MSSTOFgSwsH/QJWaQ5as7ZcmgBZkzjjU1UrQ74ci1gWBCSGHtuV1H2mhSnO3Wp/3fEV5a+4wz//6qy8JxjZsmxxy5+4w9CDNJY09T072iKG0EnOS0arEYgXqYnXcYHwjTtUNAcMelOd4xpkoqiTYICWFq0JSiPfPDQdnt+4/wuqcXY47QILbgAAAABJRU5ErkJggg==');
+    opacity: 0.03; /* Might need to increase opacity slightly in dark mode? */
+    pointer-events: none;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--heading-text-light);
+    transition: color 0.4s ease; /* Added transition */
+}
+
+/* Improved typography */
+.display-5 {
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+.lead {
+    font-weight: 400;
+    line-height: 1.6;
+    /* color is inherited from body */
+}
+
+/* Content container */
+.container {
+    max-width: 1200px;
+}
+
+/* Improved spacing */
+main {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: var(--navbar-scrolled-bg-light);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--navbar-link-light);
+    transition: color 0.3s;
+}
+
+.nav-item {
+    position: relative;
+    margin-left: 0.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--navbar-link-light);
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--navbar-link-hover-light);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    color: var(--navbar-link-active-light);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background-color: var(--navbar-link-active-after-light);
+    transition: background-color 0.3s; /* Added transition */
+}
+
+/* Profile Section */
+.profile-image {
+    border: 5px solid var(--profile-image-border-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s, box-shadow 0.5s, border-color 0.4s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Cards */
+.project-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px var(--project-card-shadow-light);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                background-color 0.4s ease; /* Added background-color transition */
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2.5rem;
+    background-color: var(--default-card-bg-light); /* Default background */
+}
+
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.2) 50%,
+                rgba(255,255,255,0) 100%);
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--project-card-hover-shadow-light);
+}
+
+.project-card:hover::before {
+    transform: translateX(100%);
+}
+
+/* Project card image styling */
+.project-card img {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.03);
+}
+
+/* Card elements styling */
+.project-card .card-body {
+    padding: 2rem;
+}
+
+.project-card .card-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+     /* Color inherited from h1-h6 */
+}
+
+.project-card .card-text {
+    color: var(--project-card-text-light);
+    transition: color 0.4s ease;
+}
+
+/* Button styling in project cards */
+.project-card .btn {
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Utility Classes */
+.bg-light {
+    background-color: var(--bg-light-color) !important;
+    transition: background-color 0.4s ease;
+}
+
+.bg-light-accent {
+    background-color: var(--bg-light-accent-color) !important;
+    transition: background-color 0.4s ease;
+}
+
+/* Project Colors - Exact match to PDF (Light Mode) */
+.project-card:nth-child(1) { background-color: var(--project-card-1-bg-light); }
+.project-card:nth-child(2) { background-color: var(--project-card-2-bg-light); }
+.project-card:nth-child(3) { background-color: var(--project-card-3-bg-light); }
+.project-card:nth-child(4) { background-color: var(--project-card-4-bg-light); }
+/* Add more nth-child rules if needed */
+
+/* Project metrics styling */
+.metric-value {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: var(--metric-value-light);
+    font-weight: 700;
+    transition: color 0.4s ease;
+}
+
+/* For values starting with + */
+.metric-value[data-prefix="plus"]::before { content: "+"; }
+/* For values with avg suffix */
+.metric-value[data-suffix="avg"]::after { content: " avg"; }
+/* For values with up arrow */
+.metric-value[data-prefix="up-arrow"]::before { content: "↑"; }
+
+/* Project card metrics card */
+.metrics-card {
+    background: transparent; /* Assuming transparent background desired */
+    border: none;
+    box-shadow: 0 3px 10px var(--metrics-card-shadow-light);
+    transition: box-shadow 0.4s ease;
+}
+
+/* Metrics Animation */
+.project-card .fw-bold { /* Assuming this targets metric values or similar */
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+    color: var(--metric-value-light); /* Ensure it uses variable */
+}
+
+.project-card:hover .fw-bold {
+    transform: scale(1.1);
+    color: var(--metric-hover-light);
+}
+
+/* Skills */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--badge-bg-light); /* Default badge color */
+    color: white; /* Assuming light text on default badge */
+}
+
+.badge:hover {
+    transform: translateY(-3px);
+    background-color: var(--badge-hover-bg-light) !important;
+}
+
+/* Achievement Cards */
+.achievement-card {
+    border-radius: 8px;
+    border: none;
+    background-color: var(--default-card-bg-light); /* Default background */
+    box-shadow: 0 3px 10px var(--achievement-card-shadow-light);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.4s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--achievement-card-hover-shadow-light);
+}
+
+/* Education Section */
+.education-item {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s;
+}
+
+.education-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--education-item-before-bg-light);
+    transition: background-color 0.3s;
+}
+
+.education-item:hover {
+    transform: translateX(5px);
+}
+
+.education-item:hover::before {
+    background-color: var(--education-item-hover-before-bg-light);
+}
+
+.education-item h3 {
+    margin-bottom: 0.5rem;
+    /* Color inherited from h1-h6 */
+}
+
+/* Regular buttons */
+.btn-dark {
+    background-color: var(--btn-dark-bg-light);
+    color: white; /* Assuming light text on dark button */
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.btn-dark:hover {
+    transform: translateY(-3px);
+    background-color: var(--btn-dark-hover-bg-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-dark {
+    border-color: var(--btn-outline-dark-border-light);
+    color: var(--btn-outline-dark-text-light);
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.btn-outline-dark:hover {
+    transform: translateY(-3px);
+    background-color: var(--btn-outline-dark-hover-bg-light);
+    color: var(--btn-outline-dark-hover-text-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Project card buttons - special styling */
+.project-btn {
+    background-color: transparent;
+    border: 1px solid var(--project-card-btn-border-light);
+    color: var(--btn-outline-dark-text-light); /* Use consistent variable */
+    /* Inherits padding, border-radius, font-weight from .btn-outline-dark potentially */
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.project-btn:hover {
+    background-color: var(--project-card-btn-hover-bg-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    color: var(--btn-outline-dark-text-light); /* Keep text color on hover */
+}
+
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    background-color: var(--footer-bg-light);
+    backdrop-filter: blur(5px);
+    color: var(--footer-text-light); /* Set base text color for footer */
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+footer p { /* Ensure paragraphs in footer inherit correctly */
+    color: var(--footer-text-light);
+    transition: color 0.4s ease;
+}
+
+footer a {
+    color: var(--footer-text-light); /* Links should match surrounding text */
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+    text-decoration: underline; /* Add underline for clarity */
+}
+
+footer a:hover {
+    color: var(--footer-link-hover-light) !important; /* Make hover color explicit */
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+/* Loading Animation */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--loading-bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s, background-color 0.4s ease;
+}
+
+.loading.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3; /* Keep light track */
+    border-top: 5px solid var(--loading-spinner-light);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transition: border-top-color 0.4s ease;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Page Transitions */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .profile-image {
+        margin-top: 2rem;
+        max-width: 150px;
+    }
+
+    .project-card {
+        margin-bottom: 2rem;
+    }
+}
+
+
+/* ================================== */
+/* ========== DARK MODE CSS ========= */
+/* ================================== */
+
+body.dark-mode {
+    color: var(--body-text-dark);
+    background: var(--body-bg-dark); /* Use solid dark background */
+    animation: none; /* Disable gradient animation in dark mode */
+}
+
+/* Adjust grain overlay opacity if needed for dark mode */
+body.dark-mode::before {
+     opacity: 0.05; /* Slightly more visible perhaps */
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--heading-text-dark);
+}
+
+body.dark-mode .lead {
+    color: var(--body-text-dark); /* Ensure lead text is light */
+}
+
+/* Dark Navigation */
+/*body.dark-mode .navbar {
+    /* background-color: transparent; Remains transparent initially */
+
+body.dark-mode .navbar.scrolled {
+    background-color: var(--navbar-scrolled-bg-dark);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.08); /* Lighter shadow */
+}
+
+body.dark-mode .navbar-brand {
+    color: var(--navbar-link-dark);
+}
+body.dark-mode .navbar-brand:hover {
+    color: var(--navbar-link-hover-dark);
+}
+
+
+body.dark-mode .nav-link {
+    color: var(--navbar-link-dark) !important; /* Override potential specificity */
+}
+
+body.dark-mode .nav-link:hover {
+    color: var(--navbar-link-hover-dark) !important;
+}
+
+body.dark-mode .nav-link.active {
+    color: var(--navbar-link-active-dark) !important;
+}
+
+body.dark-mode .nav-link.active::after {
+    background-color: var(--navbar-link-active-after-dark);
+}
+
+/* Dark Profile Image */
+body.dark-mode .profile-image {
+    border-color: var(--profile-image-border-dark);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.08);
+}
+body.dark-mode .profile-image:hover {
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.12);
+}
+
+
+/* Dark Project Cards */
+body.dark-mode .project-card {
+    box-shadow: 0 5px 20px var(--project-card-shadow-dark);
+    background-color: var(--project-card-bg-dark); /* Use consistent dark bg */
+}
+
+/* Override specific nth-child backgrounds for dark mode */
+body.dark-mode .project-card:nth-child(1),
+body.dark-mode .project-card:nth-child(2),
+body.dark-mode .project-card:nth-child(3),
+body.dark-mode .project-card:nth-child(4) {
+    background-color: var(--project-card-bg-dark);
+}
+
+body.dark-mode .project-card:hover {
+    box-shadow: 0 20px 40px var(--project-card-hover-shadow-dark);
+}
+
+/* Gloss effect for dark mode cards */
+body.dark-mode .project-card::before {
+    background: linear-gradient(120deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.08) 50%, /* Subtle white gloss */
+                rgba(255,255,255,0) 100%);
+}
+
+body.dark-mode .project-card .card-title {
+     color: var(--heading-text-dark);
+}
+
+body.dark-mode .project-card .card-text {
+    color: var(--project-card-text-dark);
+}
+
+/* Dark Background Utility Classes */
+body.dark-mode .bg-light {
+    background-color: var(--bg-light-color-in-dark) !important;
+}
+
+body.dark-mode .bg-light-accent {
+    background-color: var(--bg-light-accent-color-in-dark) !important;
+}
+
+/* Dark Project Metrics */
+body.dark-mode .metric-value {
+    color: var(--metric-value-dark);
+}
+
+body.dark-mode .metrics-card {
+    box-shadow: 0 3px 10px var(--metrics-card-shadow-dark);
+}
+
+body.dark-mode .project-card .fw-bold {
+    color: var(--metric-value-dark);
+}
+
+body.dark-mode .project-card:hover .fw-bold {
+    color: var(--metric-hover-dark);
+}
+
+/* Dark Skills Badges */
+body.dark-mode .badge {
+    background-color: var(--badge-bg-dark);
+    color: var(--body-text-dark); /* Light text on dark badge */
+}
+
+body.dark-mode .badge:hover {
+    background-color: var(--badge-hover-bg-dark) !important;
+    color: #121212; /* Dark text on hover */
+}
+
+/* Dark Achievement Cards */
+body.dark-mode .achievement-card {
+    background-color: var(--achievement-card-bg-dark);
+    box-shadow: 0 3px 10px var(--achievement-card-shadow-dark);
+}
+
+body.dark-mode .achievement-card:hover {
+    box-shadow: 0 10px 25px var(--achievement-card-hover-shadow-dark);
+}
+body.dark-mode .achievement-card .card-body p, /* Ensure text inside is light */
+body.dark-mode .achievement-card .card-body h5 {
+    color: var(--body-text-dark);
+}
+
+/* Dark Cards/Sections */
+body.dark-mode .card {
+    background-color: var(--default-card-bg-dark) !important; /* Use default dark bg; ADD !important */
+    border-color: var(--border-color-dark) !important;      /* ADD !important */
+}
+
+/* Dark Education Section */
+body.dark-mode .education-item::before {
+    background-color: var(--education-item-before-bg-dark);
+}
+
+body.dark-mode .education-item:hover::before {
+    background-color: var(--education-item-hover-before-bg-dark);
+}
+
+body.dark-mode .education-item h3 {
+    color: var(--heading-text-dark);
+}
+body.dark-mode .education-item p,
+body.dark-mode .education-item span { /* Ensure text inside is light */
+    color: var(--body-text-dark);
+}
+
+/* Dark Buttons */
+body.dark-mode .btn-dark {
+    background-color: var(--btn-dark-bg-dark);
+    color: var(--btn-dark-text-dark);
+    box-shadow: none;
+}
+
+body.dark-mode .btn-dark:hover {
+    background-color: var(--btn-dark-hover-bg-dark);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .btn-outline-dark {
+    border-color: var(--btn-outline-dark-border-dark);
+    color: var(--btn-outline-dark-text-dark);
+    box-shadow: none;
+}
+
+body.dark-mode .btn-outline-dark:hover {
+    background-color: var(--btn-outline-dark-hover-bg-dark);
+    color: var(--btn-outline-dark-hover-text-dark);
+    border-color: var(--btn-outline-dark-hover-bg-dark); /* Match border to bg */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Project Card Buttons */
+/* Dark Project Card Buttons */
+body.dark-mode .project-btn {
+    border: 1px solid var(--btn-outline-dark-border-dark); /* Use the main dark outline border color (#bbb) */
+    color: var(--btn-outline-dark-text-dark);           /* Use the main dark outline text color (#bbb) */
+    background-color: transparent;                      /* Keep background transparent initially */
+    box-shadow: none;                                   /* Remove any default shadow */
+}
+
+body.dark-mode .project-btn:hover {
+    background-color: var(--btn-outline-dark-hover-bg-dark);  /* Use main dark outline hover bg (#bbb) */
+    color: var(--btn-outline-dark-hover-text-dark);         /* Use main dark outline hover text (#121212) */
+    border-color: var(--btn-outline-dark-hover-bg-dark);   /* Match border to hover background */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);      /* Optional: Adjust hover shadow if needed */
+}
+
+
+/* Dark Footer */
+body.dark-mode footer {
+    background-color: var(--footer-bg-dark);
+    color: var(--footer-text-dark);
+}
+
+body.dark-mode footer p {
+    color: var(--footer-text-dark);
+}
+
+body.dark-mode footer a {
+    color: var(--footer-text-dark);
+}
+
+body.dark-mode footer a:hover {
+    color: var(--footer-link-hover-dark) !important;
+}
+
+/* Dark Loading Animation */
+body.dark-mode .loading {
+    background-color: var(--loading-bg-dark);
+}
+
+body.dark-mode .loading-spinner {
+    border-top-color: var(--loading-spinner-dark);
+}
+
+/* Ensure any other text elements are light */
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode span,
+body.dark-mode label,
+body.dark-mode div, /* Add generic div if needed */
+body.dark-mode small,
+body.dark-mode .text-muted { /* Override bootstrap muted text */
+    color: var(--body-text-dark) !important; /* Use important cautiously if overrides needed */
+}
+
+/* Style the toggle button itself */
+#darkModeToggle {
+   padding: 0.5rem 0.75rem; /* Match navbar padding */
+   line-height: 1; /* Align icon better */
+   font-size: 1rem; /* Match navbar font size */
+   border-radius: .25rem;
+}
+/* Make toggle button outline match theme */
+body:not(.dark-mode) #darkModeToggle {
+    color: var(--btn-outline-dark-text-light);
+    border-color: var(--btn-outline-dark-border-light);
+}
+body:not(.dark-mode) #darkModeToggle:hover {
+    background-color: var(--btn-outline-dark-hover-bg-light);
+    color: var(--btn-outline-dark-hover-text-light);
+}
+body.dark-mode #darkModeToggle {
+    color: var(--btn-outline-dark-text-dark);
+    border-color: var(--btn-outline-dark-border-dark);
+}
+body.dark-mode #darkModeToggle:hover {
+    background-color: var(--btn-outline-dark-hover-bg-dark);
+    color: var(--btn-outline-dark-hover-text-dark);
+}
+

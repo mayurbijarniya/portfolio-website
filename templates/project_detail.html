@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.title }} - Portfolio{% endblock %}
+
+{% block content %}
+<div class="mb-4">
+    <a href="{{ url_for('projects') }}" class="text-decoration-none">
+        <i class="fas fa-arrow-left me-2"></i> Back to Projects
+    </a>
+</div>
+
+<div class="row mb-5">
+    <div class="col-12">
+        <img src="{{ project.image_path }}" alt="{{ project.title }}" class="img-fluid rounded mb-4 w-100" style="max-height: 400px; object-fit: cover;">
+        <h1 class="display-5 fw-bold">{{ project.title }}</h1>
+        <p class="lead">{{ project.description }}</p>
+    </div>
+</div>
+
+<!-- Project Metrics -->
+<div class="row mb-5">
+    {% for metric in project.metrics %}
+    <div class="col-md-3 col-6 mb-4">
+        <div class="card h-100 text-center metrics-card">
+            <div class="card-body">
+                <p class="text-muted mb-2">{{ metric.name }}</p>
+                <h3 class="fw-bold metric-value">{{ metric.value }}</h3>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Project Details -->
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="mb-4">Project Details</h2>
+        <p>{{ project.details }}</p>
+    </div>
+</div>
+
+<!-- You can add more sections based on your project needs: -->
+<!-- 
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="mb-4">Problem Statement</h2>
+        <p>Details about the problem you were solving...</p>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="mb-4">Solution Approach</h2>
+        <p>How you approached solving the problem...</p>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="mb-4">Technologies Used</h2>
+        <div class="d-flex flex-wrap">
+            <span class="badge bg-secondary me-2 mb-2 p-2">Python</span>
+            <span class="badge bg-secondary me-2 mb-2 p-2">Flask</span>
+            <span class="badge bg-secondary me-2 mb-2 p-2">Machine Learning</span>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="mb-4">Results & Impact</h2>
+        <p>The outcomes and impact of your project...</p>
+    </div>
+</div>
+-->
+
+<!-- Next Projects -->
+<div class="row mt-5">
+    <div class="col-12">
+        <h2 class="mb-4">Explore Other Projects</h2>
+    </div>
+</div>
+
+<div class="row">
+    {% for other_project in data.projects if other_project.id != project.id %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <img src="{{ other_project.image_path }}" class="card-img-top" alt="{{ other_project.title }}">
+            <div class="card-body">
+                <h3 class="h5">{{ other_project.title }}</h3>
+                <p class="small">{{ other_project.description | truncate(100) }}</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a href="{{ url_for('project_detail', project_id=other_project.id) }}" class="btn btn-sm btn-dark project-btn">View project</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
