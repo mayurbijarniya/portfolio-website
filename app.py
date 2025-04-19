@@ -1,6 +1,7 @@
 # app.py - Main Flask application file
 
 from flask import Flask, render_template
+from flask import request
 import json
 
 app = Flask(__name__)
@@ -48,6 +49,11 @@ def resume():
     with open('static/data/resume.json', 'r') as file:
         data = json.load(file)
     return render_template('resume.html', data=data)
+
+@app.context_processor
+def inject_active_page():
+    # request.endpoint is the name of the view function being executed
+    return dict(active_page=request.endpoint)
 
 if __name__ == '__main__':
     app.run(debug=True)
