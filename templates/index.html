@@ -5,7 +5,8 @@
 {% block content %}
 <div class="row align-items-center mb-5">
     <div class="col-md-8 text-center text-md-start">
-        <h1 class="display-4 fw-bold">Hey, I'm {{ data.personal_info.name }} — and here's a look at what I build.</h1>
+        <!-- <h1 class="display-4 fw-bold">Hey, I'm {{ data.personal_info.name }} — and here's a look at what I build.</h1> -->
+        <h1 class="display-4 fw-bold">{{ data.personal_info.headline }}</h1>
         <p class="lead mt-4">{{ data.personal_info.bio }}</p>
         <p>{{ data.personal_info.description }}</p>
     </div>
