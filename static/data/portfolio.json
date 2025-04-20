@@ -78,7 +78,7 @@
       "Sports Analytics",
       "Data Visualization",
       "Collaborative Reporting"
-      ],
+    ],
       "challenges": "Unifying inconsistent data formats across seasons and sources (PremierLeague.com, FotMob, NYTimes) required extensive cleanup. Handling edge cases in event timings, ensuring accurate match alignment, and balancing workloads across a six-person team were key hurdles. Designing relevant, real-world hypotheses and drawing valid conclusions under time constraints also added complexity.",
       "learnings": "Improved my ability to turn messy, real-world datasets into statistically sound conclusions. Gained hands-on experience with scraping and preparing data for hypothesis testing. Learned how rule changes can influence tactical and behavioral shifts in professional sports, and how to validate those effects with confidence.",
       "slideshow_title": "Premier League Rule Impact Analysis", 
@@ -108,8 +108,7 @@
       "/static/project_files/premier-league/slides/premier-league-slide-23.png",
       "/static/project_files/premier-league/slides/premier-league-slide-24.png",
       "/static/project_files/premier-league/slides/premier-league-slide-25.png",
-      "/static/project_files/premier-league/slides/premier-league-slide-26.png",
-      "/static/project_files/premier-league/slides/premier-league-slide-27.png"
+      "/static/project_files/premier-league/slides/premier-league-slide-26.png"
     ],
     "document_pdf_path": "/static/project_files/premier-league/premier-league-document.pdf"
   }
@@ -134,6 +133,7 @@
         "slideshow_title": "UniCircle Presentation", 
         "slideshow_images": [
           "/static/project_files/unicircle/slides/unicircle-slide-01.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-02.png",
           "/static/project_files/unicircle/slides/unicircle-slide-03.png",
           "/static/project_files/unicircle/slides/unicircle-slide-04.png",
           "/static/project_files/unicircle/slides/unicircle-slide-05.png",
