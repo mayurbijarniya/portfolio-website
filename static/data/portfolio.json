@@ -74,13 +74,13 @@
         {"name": "Event Discoverability", "value": "+40%"}
       ],
       "details": {
-        "long_description": "Conceptualized a student-exclusive networking platform addressing social connectivity challenges identified through analysis of 25+ stakeholder interviews. Synthesized qualitative research revealing key pain points: 40% of students struggled with initial connections. Created detailed PRD with interactive wireframes, connection strength metrics, and conversation starters aligned with stakeholder requirements. Formulated phased roadmap with defined resource requirements and success metrics for platform launch.", 
-        "role": "Product Manager, UX Strategist", 
-        "location": "Boston, MA", 
-        "date": "Jan 2025 – Mar 2025", 
-        "technologies": ["Flask", "Python", "UX Research", "Figma", "Agile"], 
-        "challenges": "Detail challenges faced (e.g., defining MVP features, ensuring user privacy, balancing features with development time).",
-        "learnings": "Detail key learnings (e.g., conducting effective user interviews, translating user needs into product requirements, roadmap prioritization).",
+        "long_description": "Led the product strategy and experience design for UniCircle, a social platform built to reduce student isolation and foster meaningful connections within Northeastern University. Conducted over 25 interviews and user surveys to identify core pain points among full-time and part-time students. Defined feature roadmap, user personas, and MVP scope based on unmet needs around structured, low-effort social engagement. Designed campus-specific flows including event creation, NEU facility booking, conversation starters, and connection-strength tracking. UniCircle aims to bridge the gap between casual encounters and lasting friendships through student-centered, university-exclusive design.",
+        "role": "Product Manager, UX Strategist",
+        "location": "Boston, MA",
+        "date": "Spring 2025",
+        "technologies": ["Figma", "User Research", "Persona Development", "Journey Mapping", "Agile Methodology", "Product Roadmapping", "KPI Definition", "Competitive Analysis", "Interview Synthesis", "UX Wireframing"],
+        "challenges": "Students struggled to maintain social connections post-event and lacked a structured platform to build friendships. The biggest challenge was designing a scalable yet highly personalized social experience, while balancing the unique needs of full-time students and time-constrained part-time workers like TAs and RAs. Ensuring SSO-based privacy, smooth facility API integration, and inclusive interaction flows were also key technical and strategic hurdles.",
+        "learnings": "Refined skills in stakeholder-led discovery, hypothesis-driven product design, and agile roadmap planning. Learned how to design for both casual and intentional social engagement by integrating micro-interactions (like post-event ratings and reconnection suggestions) that align with student behavior patterns. Gained valuable insight into leading multi-phase rollouts (Alpha to Beta to Public) and using research as a driver for long-term feature prioritization.",
         "slideshow_title": "UniCircle Presentation", 
         "slideshow_images": [
           "/static/project_files/unicircle/slides/unicircle-slide-01.png",
