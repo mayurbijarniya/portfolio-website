@@ -5,18 +5,18 @@
 {% block content %}
 <h1 class="mb-5">Achievements & Experience</h1>
 
-<div class="row">
+<div class="achievements-container">
     {% for achievement in achievements %}
-    <div class="col-md-6 mb-4">
-        <div class="card achievement-card h-100">
-            <div class="card-body">
-                <h2 class="h4 mb-2">{{ achievement.title }}</h2>
-                <h3 class="h6 text-muted mb-1">{{ achievement.event }}</h3>
-                <p class="small text-muted mb-3">{{ achievement.organization }} • {{ achievement.date }}</p>
-                <p>{{ achievement.description }}</p>
-            </div>
+    <div class="achievement-card glass">
+        <div class="card-body">
+            <h2 class="h4 mb-2">{{ achievement.title }}</h2>
+            <h3 class="h6 text-muted mb-1">{{ achievement.event }}</h3>
+            <p class="small text-muted mb-3">{{ achievement.organization }} • {{ achievement.date }}</p>
+            <p>{{ achievement.description }}</p>
         </div>
     </div>
     {% endfor %}
 </div>
+
+{% endblock %}
 {% endblock %}
