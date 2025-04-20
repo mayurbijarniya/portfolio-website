@@ -106,12 +106,14 @@
   
   <div class="achievements-scroll">
     {% for achievement in data.achievements[:4] %}
-    <div class="card h-100 achievement-card">
-      <div class="card-body">
-        <h3 class="h5">{{ achievement.title }}</h3>
-        <h4 class="h6 text-muted">{{ achievement.event }}</h4>
-        <p class="small text-muted">{{ achievement.organization }} • {{ achievement.date }}</p>
-        <p>{{ achievement.description }}</p>
+    <div class="achievement-card">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3 class="h5">{{ achievement.title }}</h3>
+          <h4 class="h6 text-muted">{{ achievement.event }}</h4>
+          <p class="small text-muted">{{ achievement.organization }} • {{ achievement.date }}</p>
+          <p>{{ achievement.description }}</p>
+        </div>
       </div>
     </div>
     {% endfor %}
