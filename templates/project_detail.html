@@ -22,6 +22,18 @@
          object-fit: contain; /* Scale image nicely */
          margin: 0 auto; /* Center image horizontally if needed */
       }
+      /* Optional: Style for prototype button container */
+      .prototype-button-container {
+          margin-top: 1.5rem; /* Space above the button */
+          margin-bottom: 1.5rem; /* Space below the button */
+      }
+      /* Optional: Ensure carousel inner area has some height */
+      #projectSlideshow .carousel-inner {
+          min-height: 400px;
+          background-color: #f8f9fa; /* Optional light background */
+          border-radius: .25rem;
+          border: 1px solid #dee2e6;
+      }
 </style>
 
 <div class="container mt-4">
@@ -48,6 +60,14 @@
              {% endif %}
         </div>
 
+        {% if project.details is mapping and project.details.prototype_url %}
+            <div class="prototype-button-container text-center"> {# Centered container for the button #}
+                 {# UPDATED classes from btn-primary btn-lg to btn-outline-dark #}
+                <a href="{{ project.details.prototype_url }}" class="btn btn-outline-dark" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt me-2"></i> View Prototype
+                </a>
+            </div>
+        {% endif %}
         {# Display main project image if NO slideshow exists (optional placement) #}
         {% if not (project.details is mapping and project.details.slideshow_images) and project.image_path %}
              <div class="mb-4 text-center">

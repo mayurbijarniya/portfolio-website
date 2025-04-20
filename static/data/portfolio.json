@@ -39,7 +39,8 @@
         "/static/project_files/nexus-ai/slides/nexus-ai-slide-11.png",
         "/static/project_files/nexus-ai/slides/nexus-ai-slide-12.png"
       ],
-      "document_pdf_path": null 
+      "document_pdf_path": null,
+      "prototype_url": "https://nexuss-aii.netlify.app/"
     }
     },
     {
@@ -204,7 +205,8 @@
           "/static/project_files/unicircle/slides/unicircle-slide-15.png",
           "/static/project_files/unicircle/slides/unicircle-slide-16.png"
         ],
-        "document_pdf_path": "/static/project_files/unicircle/unicircle-document.pdf"
+        "document_pdf_path": "/static/project_files/unicircle/unicircle-document.pdf",
+        "prototype_url": "https://www.figma.com/proto/z49p3gC6pJsQWhjRNL2pGG/Unicircle-PRD?node-id=2-2317&p=f&t=KKpK5t6F0kRKYX0s-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2317"
       }
     }
   ],
