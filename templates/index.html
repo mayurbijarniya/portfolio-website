@@ -100,24 +100,24 @@
 <!-- Achievements Section Preview -->
 <div class="row mt-5">
     <div class="col-12">
-      <h2 class="mb-4">Highlights</h2>
+        <h2 class="mb-4">Highlights</h2>
     </div>
-  </div>
-  
-  <div class="highlight-scroll-wrapper">
+</div>
+
+<div class="row">
     {% for achievement in data.achievements[:2] %}
-    <div class="highlight-card">
-      <div class="card h-100">
-        <div class="card-body">
-          <h3 class="h5">{{ achievement.title }}</h3>
-          <h4 class="h6 text-muted">{{ achievement.event }}</h4>
-          <p class="small text-muted">{{ achievement.organization }} • {{ achievement.date }}</p>
-          <p>{{ achievement.description }}</p>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3 class="h5">{{ achievement.title }}</h3>
+                <h4 class="h6 text-muted">{{ achievement.event }}</h4>
+                <p class="small text-muted">{{ achievement.organization }} • {{ achievement.date }}</p>
+                <p>{{ achievement.description }}</p>
+            </div>
         </div>
-      </div>
     </div>
     {% endfor %}
-  </div>
+</div>
 
 <div class="text-center mt-4 mb-5">
     <a href="{{ url_for('achievements') }}" class="btn btn-outline-dark">View All Achievements</a>
