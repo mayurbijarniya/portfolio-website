@@ -844,3 +844,38 @@ body.dark-mode #darkModeToggle:hover {
     color: var(--btn-outline-dark-hover-text-dark);
 }
 
+/* Highlight Scroll Section for Index Page Only */
+.highlight-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  
+  .highlight-card {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 360px;
+    scroll-snap-align: start;
+  }
+  
+  .highlight-card .card {
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+    height: 100%;
+  }
+  
+  .highlight-card .card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .highlight-scroll-wrapper::-webkit-scrollbar {
+    height: 6px;
+  }
+  .highlight-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+  }
