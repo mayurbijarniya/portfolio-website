@@ -844,37 +844,3 @@ body.dark-mode #darkModeToggle:hover {
     color: var(--btn-outline-dark-hover-text-dark);
 }
 
-.achievements-scroll {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    padding-bottom: 1rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-  }
-  
-  .achievement-card {
-    flex: 0 0 auto;
-    width: 300px;
-    scroll-snap-align: start;
-  }
-  
-  .achievement-card .card {
-    height: 100%;
-    min-height: 100%;
-    border-radius: 16px;
-    transition: transform 0.3s ease;
-  }
-  
-  .achievement-card .card:hover {
-    transform: translateY(-4px);
-  }
-  
-  .achievements-scroll::-webkit-scrollbar {
-    height: 6px;
-  }
-  .achievements-scroll::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
-  }
