@@ -62,7 +62,57 @@
         {"name": "Late-Game Goals", "value": "3.27 avg"},
         {"name": "Substitutions", "value": "+0.53 avg"}
       ],
-      "details": "Full project details would go here..."
+      "details": {
+      "long_description": "Conducted an in-depth data analysis project to evaluate the Premier League’s 2023-24 timekeeping rule changes and their impact on match dynamics. Framed the study around four key aspects: late-game goals, injury trends, disciplinary actions, and substitutions. Gathered and processed match data across three seasons (1,140 matches total) using Python (Selenium, BeautifulSoup), followed by statistical testing in R and Excel. Applied confidence intervals and hypothesis testing to identify significant shifts. Found a marked increase in goals and substitutions after 90 minutes, while injuries remained statistically stable—offering data-backed insights into how rule changes influence gameplay and strategy.",
+      "role": "Data Analyst & Statistical Researcher",
+      "location": "Boston, MA",
+      "date": "Fall 2024",
+      "technologies": [
+      "Python (BeautifulSoup, Selenium)",
+      "R",
+      "MS Excel",
+      "Statistical Modeling",
+      "Hypothesis Testing",
+      "Confidence Intervals",
+      "Data Cleaning",
+      "Sports Analytics",
+      "Data Visualization",
+      "Collaborative Reporting"
+      ],
+      "challenges": "Unifying inconsistent data formats across seasons and sources (PremierLeague.com, FotMob, NYTimes) required extensive cleanup. Handling edge cases in event timings, ensuring accurate match alignment, and balancing workloads across a six-person team were key hurdles. Designing relevant, real-world hypotheses and drawing valid conclusions under time constraints also added complexity.",
+      "learnings": "Improved my ability to turn messy, real-world datasets into statistically sound conclusions. Gained hands-on experience with scraping and preparing data for hypothesis testing. Learned how rule changes can influence tactical and behavioral shifts in professional sports, and how to validate those effects with confidence.",
+      "slideshow_title": "Premier League Rule Impact Analysis", 
+      "slideshow_images": [
+      "/static/project_files/premier-league/slides/premier-league-slide-01.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-02.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-03.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-04.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-05.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-06.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-07.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-08.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-09.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-10.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-11.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-12.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-13.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-14.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-15.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-16.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-17.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-18.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-19.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-20.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-21.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-22.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-23.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-24.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-25.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-26.png",
+      "/static/project_files/premier-league/slides/premier-league-slide-27.png"
+    ],
+    "document_pdf_path": "/static/project_files/premier-league/premier-league-document.pdf"
+  }
     },
     {
       "id": "unicircle",
