@@ -32,7 +32,7 @@
     {
       "id": "premier-league",
       "title": "Premier League Timekeeping Analysis",
-      "description": "Analysed 1140+ matches to uncover the impact of new stoppage time rules on goals, injuries, and match dynamics.",
+      "description": "Analyzed 1140+ matches to uncover the impact of new stoppage time rules on goals, injuries, and match dynamics.",
       "image_path": "/static/img/premier-league.jpg",
       "metrics": [
         {"name": "Late-Game Goals", "value": "3.27 avg"},
