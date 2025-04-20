@@ -159,26 +159,34 @@ section {
     margin-bottom: 4rem;
 }
 
-/* Navigation */
+/* ======================================== */
+/* ========== ENHANCED NAVBAR ============ */
+/* ======================================== */
+
 .navbar {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     background-color: transparent;
     border: none;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .navbar.scrolled {
+    padding: 0.8rem 0;
     background-color: var(--navbar-scrolled-bg-light);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
 }
 
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--navbar-link-light);
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-brand:hover {
+    transform: translateY(-2px);
 }
 
 .nav-item {
@@ -190,7 +198,7 @@ section {
     font-weight: 500;
     color: var(--navbar-link-light);
     padding: 0.5rem 1rem;
-    transition: color 0.3s, transform 0.3s;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
 }
 
@@ -206,12 +214,31 @@ section {
 .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     left: 1rem;
     right: 1rem;
     height: 2px;
     background-color: var(--navbar-link-active-after-light);
-    transition: background-color 0.3s; /* Added transition */
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background-color: var(--navbar-link-active-after-light);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
 }
 
 /* Profile Section */
@@ -226,22 +253,25 @@ section {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Project Cards */
+/* ======================================== */
+/* ========== ENHANCED PROJECT CARDS ===== */
+/* ======================================== */
+
 .project-card {
     border: none;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 5px 20px var(--project-card-shadow-light);
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
-                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
-                background-color 0.4s ease; /* Added background-color transition */
+    box-shadow: 0 10px 30px var(--project-card-shadow-light);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background-color 0.4s ease;
     position: relative;
     z-index: 1;
     margin-bottom: 2.5rem;
-    background-color: var(--default-card-bg-light); /* Default background */
+    background-color: #ffffff; /* White background initially */
 }
 
-
+/* Enhanced shimmer effect */
 .project-card::before {
     content: '';
     position: absolute;
@@ -249,19 +279,22 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg,
-                rgba(255,255,255,0) 0%,
-                rgba(255,255,255,0.2) 50%,
-                rgba(255,255,255,0) 100%);
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0) 30%,
+        rgba(255,255,255,0.4) 50%,
+        rgba(255,255,255,0) 70%
+    );
     transform: translateX(-100%);
-    transition: transform 1s ease;
-    z-index: -1;
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 0;
     pointer-events: none;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px var(--project-card-hover-shadow-light);
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px var(--project-card-hover-shadow-light);
+    background-color: #e1f5fe; /* Light blue color on hover to match portfolio */
 }
 
 .project-card:hover::before {
@@ -271,34 +304,49 @@ section {
 /* Project card image styling */
 .project-card img {
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .project-card:hover img {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 /* Card elements styling */
 .project-card .card-body {
     padding: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .project-card .card-title {
     font-weight: 700;
     margin-bottom: 1rem;
-     /* Color inherited from h1-h6 */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .card-title {
+    transform: translateY(-3px);
 }
 
 .project-card .card-text {
     color: var(--project-card-text-light);
-    transition: color 0.4s ease;
+    transition: color 0.4s ease, transform 0.3s ease;
 }
 
-/* Button styling in project cards */
-.project-card .btn {
-    margin-top: 1rem;
-    position: relative;
-    overflow: hidden;
+/* Keep original colors but override in project cards so they all start white */
+.project-card:nth-child(1),
+.project-card:nth-child(2),
+.project-card:nth-child(3),
+.project-card:nth-child(4) {
+    background-color: #ffffff;
+}
+
+/* All cards turn to the same light blue color on hover */
+.project-card:nth-child(1):hover,
+.project-card:nth-child(2):hover,
+.project-card:nth-child(3):hover,
+.project-card:nth-child(4):hover {
+    background-color: #e1f5fe;
 }
 
 /* Background Utility Classes */
@@ -311,13 +359,6 @@ section {
     background-color: var(--bg-light-accent-color) !important;
     transition: background-color 0.4s ease;
 }
-
-/* Project Colors - Exact match to PDF (Light Mode) */
-.project-card:nth-child(1) { background-color: var(--project-card-1-bg-light); }
-.project-card:nth-child(2) { background-color: var(--project-card-2-bg-light); }
-.project-card:nth-child(3) { background-color: var(--project-card-3-bg-light); }
-.project-card:nth-child(4) { background-color: var(--project-card-4-bg-light); }
-/* Add more nth-child rules if needed */
 
 /* Project metrics styling */
 .metric-value {
@@ -390,12 +431,15 @@ section {
     box-shadow: 0 10px 25px var(--achievement-card-hover-shadow-light);
 }
 
-/* Education Section */
+/* ======================================== */
+/* ======= ENHANCED EDUCATION SECTION ==== */
+/* ======================================== */
+
 .education-item {
     position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 2rem;
-    transition: transform 0.3s;
+    padding-left: 2rem;
+    margin-bottom: 2.5rem;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .education-item::before {
@@ -403,23 +447,45 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 3px;
+    width: 4px;
     height: 100%;
     background-color: var(--education-item-before-bg-light);
-    transition: background-color 0.3s;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.education-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--education-item-hover-before-bg-light);
+    transition: transform 0.3s, background-color 0.3s;
+    transform: scale(0);
 }
 
 .education-item:hover {
-    transform: translateX(5px);
+    transform: translateX(8px);
 }
 
 .education-item:hover::before {
     background-color: var(--education-item-hover-before-bg-light);
 }
 
+.education-item:hover::after {
+    transform: scale(1);
+}
+
 .education-item h3 {
     margin-bottom: 0.5rem;
-    /* Color inherited from h1-h6 */
+    transition: transform 0.3s;
+}
+
+.education-item:hover h3 {
+    transform: translateY(-2px);
 }
 
 /* Regular buttons */
@@ -543,19 +609,141 @@ footer a:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .display-4 {
-        font-size: 2.5rem;
-    }
+/* Center the View Project button in card footer */
+.project-card .card-footer {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: transparent !important;
+    border-top: none !important;
+}
 
-    .profile-image {
-        margin-top: 2rem;
-        max-width: 150px;
-    }
+/* View project button styling */
+.project-btn {
+    display: inline-block;
+    padding: 0.6rem 1.8rem;
+    border-radius: 30px;
+    font-weight: 500;
+    background-color: #333;
+    color: white !important; /* Force white text */
+    border: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
 
+.project-btn:hover {
+    background-color: #222; /* Slightly darker on hover */
+    color: white !important; /* Force white text on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .project-btn {
+    background-color: #bbb;
+    color: #121212 !important; /* Force dark text */
+}
+
+body.dark-mode .project-btn:hover {
+    background-color: #ddd;
+    color: #121212 !important; /* Force dark text on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles for different screen sizes */
+/* Tablet */
+@media (max-width: 992px) {
     .project-card {
         margin-bottom: 2rem;
+    }
+    
+    .project-card .card-body {
+        padding: 1.5rem;
+    }
+    
+    .navbar {
+        padding: 1rem 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 0.5rem 0;
+    }
+    
+    .education-item {
+        padding-left: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .profile-image {
+        max-width: 200px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-card .card-body {
+        padding: 1.25rem;
+    }
+    
+    .project-card .card-title {
+        font-size: 1.25rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    .navbar {
+        padding: 0.75rem 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 0.5rem 0;
+    }
+    
+    .education-item {
+        padding-left: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .education-item::before {
+        width: 3px;
+    }
+    
+    .education-item::after {
+        width: 10px;
+        height: 10px;
+        left: -3.5px;
+    }
+    
+    .profile-image {
+        max-width: 150px;
+        margin: 0 auto 1.5rem auto;
+        display: block;
+    }
+    
+    h1, .h1 {
+        font-size: 2rem;
+    }
+    
+    h2, .h2 {
+        font-size: 1.75rem;
+    }
+    
+    .metric-value {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1.25rem;
+    }
+    
+    .view-project {
+        padding: 0.5rem 1.5rem;
     }
 }
 
@@ -589,9 +777,6 @@ body.dark-mode .lead {
 }
 
 /* Dark Navigation */
-/*body.dark-mode .navbar {
-    /* background-color: transparent; Remains transparent initially */
-
 body.dark-mode .navbar.scrolled {
     background-color: var(--navbar-scrolled-bg-dark);
     box-shadow: 0 5px 20px rgba(255, 255, 255, 0.08); /* Lighter shadow */
@@ -600,10 +785,10 @@ body.dark-mode .navbar.scrolled {
 body.dark-mode .navbar-brand {
     color: var(--navbar-link-dark);
 }
+
 body.dark-mode .navbar-brand:hover {
     color: var(--navbar-link-hover-dark);
 }
-
 
 body.dark-mode .nav-link {
     color: var(--navbar-link-dark) !important; /* Override potential specificity */
@@ -617,7 +802,8 @@ body.dark-mode .nav-link.active {
     color: var(--navbar-link-active-dark) !important;
 }
 
-body.dark-mode .nav-link.active::after {
+body.dark-mode .nav-link.active::after,
+body.dark-mode .nav-link::after {
     background-color: var(--navbar-link-active-after-dark);
 }
 
@@ -631,13 +817,13 @@ body.dark-mode .profile-image:hover {
 }
 
 
-/* Dark Project Cards */
+/* Dark mode projects - keep the consistent dark background */
 body.dark-mode .project-card {
     box-shadow: 0 5px 20px var(--project-card-shadow-dark);
     background-color: var(--project-card-bg-dark); /* Use consistent dark bg */
 }
 
-/* Override specific nth-child backgrounds for dark mode */
+/* Ensure all cards have the same dark background in dark mode */
 body.dark-mode .project-card:nth-child(1),
 body.dark-mode .project-card:nth-child(2),
 body.dark-mode .project-card:nth-child(3),
@@ -645,7 +831,9 @@ body.dark-mode .project-card:nth-child(4) {
     background-color: var(--project-card-bg-dark);
 }
 
+/* Add a light blue hover effect in dark mode too */
 body.dark-mode .project-card:hover {
+    background-color: #0d47a1; /* Darker blue for dark mode */
     box-shadow: 0 20px 40px var(--project-card-hover-shadow-dark);
 }
 
@@ -731,9 +919,14 @@ body.dark-mode .education-item:hover::before {
     background-color: var(--education-item-hover-before-bg-dark);
 }
 
+body.dark-mode .education-item::after {
+    background-color: var(--education-item-hover-before-bg-dark);
+}
+
 body.dark-mode .education-item h3 {
     color: var(--heading-text-dark);
 }
+
 body.dark-mode .education-item p,
 body.dark-mode .education-item span { /* Ensure text inside is light */
     color: var(--body-text-dark);
@@ -764,7 +957,6 @@ body.dark-mode .btn-outline-dark:hover {
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
 
-/* Dark Project Card Buttons */
 /* Dark Project Card Buttons */
 body.dark-mode .project-btn {
     border: 1px solid var(--btn-outline-dark-border-dark); /* Use the main dark outline border color (#bbb) */
@@ -819,13 +1011,24 @@ body.dark-mode .text-muted { /* Override bootstrap muted text */
     color: var(--body-text-dark) !important; /* Use important cautiously if overrides needed */
 }
 
-/* Style the toggle button itself */
+/* Style the toggle button itself - Circular design */
 #darkModeToggle {
-   padding: 0.5rem 0.75rem; /* Match navbar padding */
-   line-height: 1; /* Align icon better */
-   font-size: 1rem; /* Match navbar font size */
-   border-radius: .25rem;
+   padding: 0.5rem;
+   line-height: 1;
+   font-size: 1rem;
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+#darkModeToggle:hover {
+    transform: translateY(-3px) rotate(15deg);
+}
+
 /* Make toggle button outline match theme */
 body:not(.dark-mode) #darkModeToggle {
     color: var(--btn-outline-dark-text-light);
@@ -891,3 +1094,26 @@ body.dark-mode #darkModeToggle:hover {
     }
   }
 
+/* Fix for dark mode highlights and achievements visibility */
+body.dark-mode .achievement-card h5,
+body.dark-mode .achievement-card p,
+body.dark-mode .achievement-card .card-body {
+    color: #f1f5f9 !important; /* Bright text for better visibility */
+}
+
+/* Fix for dark mode project details text visibility */
+body.dark-mode .project-card p,
+body.dark-mode .project-card span,
+body.dark-mode .project-card li,
+body.dark-mode .project-card .card-text {
+    color: #f1f5f9 !important; /* Force bright text for visibility */
+}
+
+/* Fix for dark mode button text visibility */
+body.dark-mode .btn-primary:hover,
+body.dark-mode .btn-dark:hover, 
+body.dark-mode .btn-outline-dark:hover,
+body.dark-mode .project-btn:hover {
+    color: #121212 !important; /* Dark text on light button for better visibility */
+    text-shadow: none; /* Remove any text shadow that might reduce visibility */
+}
