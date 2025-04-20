@@ -73,7 +73,35 @@
         {"name": "User Engagement (est.)", "value": "↑35%"},
         {"name": "Event Discoverability", "value": "+40%"}
       ],
-      "details": "Full project details would go here..."
+      "details": {
+        "long_description": "Conceptualized a student-exclusive networking platform addressing social connectivity challenges identified through analysis of 25+ stakeholder interviews. Synthesized qualitative research revealing key pain points: 40% of students struggled with initial connections. Created detailed PRD with interactive wireframes, connection strength metrics, and conversation starters aligned with stakeholder requirements. Formulated phased roadmap with defined resource requirements and success metrics for platform launch.", 
+        "role": "Product Manager, UX Strategist", 
+        "location": "Boston, MA", 
+        "date": "Jan 2025 – Mar 2025", 
+        "technologies": ["Flask", "Python", "UX Research", "Figma", "Agile"], 
+        "challenges": "Detail challenges faced (e.g., defining MVP features, ensuring user privacy, balancing features with development time).",
+        "learnings": "Detail key learnings (e.g., conducting effective user interviews, translating user needs into product requirements, roadmap prioritization).",
+        "slideshow_title": "UniCircle Presentation", 
+        "slideshow_images": [
+          "/static/project_files/unicircle/slides/unicircle-slide-01.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-02.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-03.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-04.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-05.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-06.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-07.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-08.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-09.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-10.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-11.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-12.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-13.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-14.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-15.png",
+          "/static/project_files/unicircle/slides/unicircle-slide-16.png"
+        ],
+        "document_pdf_path": "/static/project_files/unicircle/unicircle-document.pdf"
+      }
     }
   ],
   "skills": {
