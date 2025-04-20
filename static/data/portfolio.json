@@ -51,7 +51,54 @@
         {"name": "Item Discoverability", "value": "+40%"},
         {"name": "Exchange Efficiency", "value": "+30%"}
       ],
-      "details": "Full project details would go here..."
+      "details": {
+      "long_description": "Oversaw the project planning and documentation for HuskyShare, a student-centered mobile application that enables secure peer-to-peer exchange of goods within the Northeastern community. Developed a complete project management lifecycle from initiation to closure, including detailed scope definition, WBS (Work Breakdown Structure), RACI matrix, risk management, and Gantt-based scheduling. Conducted stakeholder analysis and aligned the execution phases with sustainability objectives, system compliance, and user needs. Managed a $249K budget, coordinated 12+ roles across functional areas, and designed sprint-based progress control through Agile methodology, milestone tracking, and Earned Value Management (EVM). Ensured delivery of a secure, scalable product roadmap aligned with NEU branding, SSO verification, and performance monitoring.",
+      "role": "Project Manager",
+      "location": "Boston, MA",
+      "date": "Spring 2025",
+      "technologies": [
+      "Work Breakdown Structure (WBS)",
+      "RACI Matrix",
+      "Gantt Charts",
+      "Agile Methodology",
+      "Earned Value Management (EVM)",
+      "Risk Matrix",
+      "Stakeholder Analysis",
+      "Project Scheduling",
+      "Budget Planning",
+      "Notion",
+      "Microsoft Excel"
+      ],
+      "challenges": "Coordinating efforts across engineering, design, QA, security, and legal teams while ensuring documentation stayed in sync with scope and timeline. Structuring a large, multi-phase plan with detailed task ownership using the RACI matrix and balancing dependencies across sprints. Navigating security and SSO integration compliance alongside user experience requirements within strict university standards.",
+      "learnings": "Strengthened end-to-end project planning and execution using formal PM tools and frameworks. Learned how to apply WBS and RACI models to real-world cross-functional collaboration. Gained hands-on experience in managing risk, tracking costs through EVM, and facilitating decision-making with milestone reviews and phase gates. Developed a deep understanding of stakeholder alignment and sustainability integration in product delivery.",
+      "slideshow_title": "HuskyShare Presentation",
+      "slideshow_images": [
+      "/static/project_files/huskyshare/slides/huskyshare-slide-01.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-02.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-03.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-04.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-05.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-06.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-07.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-08.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-09.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-10.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-11.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-12.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-13.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-14.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-15.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-16.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-17.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-18.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-19.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-20.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-21.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-22.png",
+      "/static/project_files/huskyshare/slides/huskyshare-slide-23.png"
+    ],
+    "document_pdf_path": "/static/project_files/huskyshare/huskyshare-document.pdf"
+  }
     },
     {
       "id": "premier-league",
