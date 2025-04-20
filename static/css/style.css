@@ -844,3 +844,49 @@ body.dark-mode #darkModeToggle:hover {
     color: var(--btn-outline-dark-hover-text-dark);
 }
 
+/* --- Highlights Carousel Styles --- */
+
+.highlights-carousel {
+    overflow: hidden; /* Crucial: Hides the cards that are off-screen */
+    position: relative;
+    width: 100%;
+  }
+  
+  .highlights-wrapper {
+    display: flex; /* Arranges cards horizontally */
+    transition: transform 1.5s ease-in-out; /* Smooth and slow animation for sliding */
+    /* The transform property will be manipulated by JavaScript */
+  }
+  
+  .achievement-item {
+    flex: 0 0 50%; /* Makes each item take up exactly 50% of the wrapper width */
+    box-sizing: border-box; /* Includes padding in the 50% width calculation */
+    padding: 0 15px; /* Adds spacing between cards (adjust as needed, matches Bootstrap col padding) */
+    /* Optional: Transparency for non-active items */
+    /* opacity: 0.7; */
+    /* transition: opacity 0.5s ease-in-out; */
+  }
+  
+  /* Optional: Style for active/focused items */
+  /* .achievement-item.active { */
+  /* opacity: 1; */
+  /* } */
+  
+  /* Ensure cards inside the flex item behave correctly */
+  .achievement-item .card {
+     width: 100%; /* Make card fill the item */
+     display: flex; /* Helps with equal height content */
+     flex-direction: column;
+  }
+  
+  .achievement-item .card .card-body {
+     flex-grow: 1; /* Allows card body to expand, pushing footer down */
+  }
+  
+  /* Adjustments for smaller screens if needed */
+  @media (max-width: 768px) {
+    .achievement-item {
+      flex: 0 0 100%; /* Show only one card at a time on smaller screens */
+      padding: 0 10px; /* Adjust padding */
+    }
+  }

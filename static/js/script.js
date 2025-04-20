@@ -20,6 +20,99 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const body = document.body;                                     // Get the body element
     const toggleIcon = toggleButton ? toggleButton.querySelector('i') : null; // Get the icon within the button (if it exists)
 
+    // --- Highlights Carousel Logic ---
+    const carousel = document.querySelector('.highlights-carousel');
+
+    // Only run if the carousel container exists on the page
+    if (carousel) {
+        const wrapper = carousel.querySelector('.highlights-wrapper');
+        const items = carousel.querySelectorAll('.achievement-item');
+        const totalItems = items.length;
+        const itemsPerPage = window.innerWidth <= 768 ? 1 : 2; // Show 1 on mobile, 2 on desktop
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        let currentPage = 0;
+        let slideInterval;
+
+        function updateCarousel() {
+            // Recalculate itemsPerPage based on current window width
+            const newItemsPerPage = window.innerWidth <= 768 ? 1 : 2;
+            const newTotalPages = Math.ceil(totalItems / newItemsPerPage);
+
+            // Apply translation
+            const translation = -currentPage * (100 / newItemsPerPage); // Adjust translation based on items per page
+             // Ensure translation doesn't exceed bounds after resize
+            if (currentPage >= newTotalPages) {
+                currentPage = newTotalPages > 0 ? newTotalPages - 1 : 0;
+            }
+            wrapper.style.transform = `translateX(${translation * newItemsPerPage}%)`; // Recalculate transform
+
+
+            // Optional: Handle active class for opacity effect
+            // items.forEach(item => item.classList.remove('active'));
+            // const startIndex = currentPage * newItemsPerPage;
+            // for (let i = 0; i < newItemsPerPage && (startIndex + i) < totalItems; i++) {
+            //     if (items[startIndex + i]) {
+            //         items[startIndex + i].classList.add('active');
+            //     }
+            // }
+        }
+
+
+        function nextSlide() {
+            const currentItemsPerPage = window.innerWidth <= 768 ? 1 : 2;
+            const currentTotalPages = Math.ceil(totalItems / currentItemsPerPage);
+
+            currentPage++;
+            if (currentPage >= currentTotalPages) {
+                currentPage = 0; // Loop back to the start
+            }
+            updateCarousel(); // Apply the changes
+        }
+
+        // Initial setup
+        if (totalItems > itemsPerPage) { // Only start sliding if there's more than one page
+             // Optional: Set initial active items
+            // updateCarousel();
+             slideInterval = setInterval(nextSlide, 5000); // Change 5000 (milliseconds) for slide duration
+
+            // Optional: Pause on hover
+            carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
+            carousel.addEventListener('mouseleave', () => {
+                 // Clear existing before setting new one to avoid duplicates
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+
+
+        } else {
+             // If not enough items to slide, ensure they are visible and centered if needed
+             wrapper.style.justifyContent = 'center'; // Center items if fewer than itemsPerPage
+             // Optional: Add active class to all visible items if not sliding
+             // items.forEach(item => item.classList.add('active'));
+        }
+
+         // Re-calculate on window resize
+        window.addEventListener('resize', () => {
+             clearInterval(slideInterval); // Stop interval during resize
+             const newItemsPerPage = window.innerWidth <= 768 ? 1 : 2;
+             const newTotalPages = Math.ceil(totalItems / newItemsPerPage);
+             // Try to maintain the visual position roughly
+             currentPage = Math.min(currentPage, newTotalPages > 0 ? newTotalPages - 1 : 0);
+             updateCarousel();
+             // Restart interval only if needed
+             if (totalItems > newItemsPerPage) {
+                 slideInterval = setInterval(nextSlide, 5000);
+             } else {
+                 wrapper.style.justifyContent = 'center';
+             }
+        });
+
+
+    } else {
+        console.log("Highlights carousel element not found.");
+    }
+    // --- End Highlights Carousel Logic ---
+
     // Function to apply the chosen theme (light or dark)
     const applyTheme = (theme) => {
         body.classList.remove('dark-mode', 'light-mode'); // Remove any existing theme class first for clean state

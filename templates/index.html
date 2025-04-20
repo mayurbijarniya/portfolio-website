@@ -104,19 +104,16 @@
     </div>
 </div>
 
-<div class="row">
-    {% for achievement in data.achievements[:2] %}
-    <div class="col-md-6 mb-4">
-        <div class="card h-100">
-            <div class="card-body">
-                <h3 class="h5">{{ achievement.title }}</h3>
-                <h4 class="h6 text-muted">{{ achievement.event }}</h4>
-                <p class="small text-muted">{{ achievement.organization }} • {{ achievement.date }}</p>
-                <p>{{ achievement.description }}</p>
+<div class="highlights-carousel mb-5">  <div class="highlights-wrapper">    {% for achievement in data.achievements %}
+        <div class="achievement-item">  <div class="col-md-12 mb-4 h-100"> <div class="card h-100 achievement-card"> <div class="card-body d-flex flex-column"> <h3 class="h5">{{ achievement.title }}</h3>
+                        <h4 class="h6 text-muted">{{ achievement.event }}</h4>
+                        <p class="small text-muted">{{ achievement.organization }} • {{ achievement.date }}</p>
+                        <p>{{ achievement.description }}</p> </div>
+                </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 
 <div class="text-center mt-4 mb-5">
