@@ -844,3 +844,66 @@ body.dark-mode #darkModeToggle:hover {
     color: var(--btn-outline-dark-hover-text-dark);
 }
 
+.achievements-scroll-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding-bottom: 1rem; /* Space for scrollbar if needed */
+    /* Optional: Add some edge padding if desired */
+    /* padding-left: 15px; */
+    /* padding-right: 15px; */
+}
+
+/* Give columns in the non-wrapping row a minimum width */
+/* Adjust 350px based on your content and desired card size */
+.achievements-scroll-container .row.flex-nowrap > [class*='col-'] {
+    min-width: 350px; 
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Target the achievement cards */
+.achievement-card { 
+    /* Glassmorphism Background */
+    background: rgba(255, 255, 255, 0.15); /* Adjust opacity (4th value) as needed */
+    backdrop-filter: blur(12px);          /* Adjust blur amount */
+    -webkit-backdrop-filter: blur(12px);  /* For Safari */
+
+    /* Optional Enhancements */
+    border-radius: 15px;                  /* Nicer rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Subtle border */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); /* Optional subtle shadow */
+
+    /* Ensure content inside isn't transparent (if needed) */
+    /* You might need to adjust text color for readability */
+    color: #your_text_color; /* Replace with your desired text color, e.g., #333 or #fff */
+}
+
+/* --- Optional: Adjust text color specifically --- */
+.achievement-card .card-body {
+    color: #343a40; /* Example: Dark text color for contrast */
+    /* Or use --bs-body-color if defined */
+}
+
+.achievement-card .card-body .text-muted {
+     color: #6c757d !important; /* Ensure muted text is readable */
+}
+
+
+/* Optional: Style the scrollbar for the horizontal container */
+.achievements-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.achievements-scroll-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.achievements-scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.achievements-scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}

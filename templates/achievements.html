@@ -5,18 +5,21 @@
 {% block content %}
 <h1 class="mb-5">Achievements & Experience</h1>
 
-<div class="row">
-    {% for achievement in achievements %}
-    <div class="col-md-6 mb-4">
-        <div class="card achievement-card h-100">
-            <div class="card-body">
-                <h2 class="h4 mb-2">{{ achievement.title }}</h2>
-                <h3 class="h6 text-muted mb-1">{{ achievement.event }}</h3>
-                <p class="small text-muted mb-3">{{ achievement.organization }} • {{ achievement.date }}</p>
-                <p>{{ achievement.description }}</p>
-            </div>
+<div class="achievements-scroll-container mb-5">
+    <div class="row flex-nowrap g-4"> {# <-- Add flex-nowrap and maybe adjust gutters (g-4) #}
+        {% for achievement in data.achievements %}
+        <div class="col-md-6 col-lg-4"> {# <-- Your existing column definition #}
+           {# Make sure the card inside has the target class, e.g., achievement-card #}
+           <div class="card h-100 achievement-card"> 
+               <div class="card-body">
+                   <h3 class="h5">{{ achievement.title }}</h3>
+                   <h4 class="h6 text-muted">{{ achievement.event }}</h4>
+                   <p class="small text-muted">{{ achievement.organization }} • {{ achievement.date }}</p>
+                   <p>{{ achievement.description }}</p>
+               </div>
+           </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock %}
