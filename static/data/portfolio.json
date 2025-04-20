@@ -17,13 +17,13 @@
         {"name": "Journal Acceptance Rate", "value": "↑30—50%"}
       ],
       "details": {
-      "long_description": "Engineered an AI platform automating research workflows including literature reviews, citation formatting, and plagiarism checks. Outlined roadmap, KPIs, and user requirements based on stakeholder interviews and academic pain points. Led cross-functional delivery through agile sprints in JIRA; documented specs for timely development. Formulated go-to-market strategy in a $112B AI-education market, projecting 30–50% efficiency gains.", 
+      "long_description": "Led the product vision and UX strategy for Nexus AI, a platform that simplifies academic publishing for students by integrating AI-powered tools for literature reviews, citation formatting, and plagiarism checks. Conducted user research and stakeholder interviews to define roadmap priorities and KPIs. Facilitated agile delivery with cross-functional teams using JIRA, and designed intuitive user flows and interfaces. Developed a go-to-market plan tailored to the $112B AI-education space, projecting 30–50% improvements in research efficiency and publication success.",
       "role": "Product Manager, UI/UX Designer",
       "location": "Boston, MA",
       "date": "Feb 2025 - Mar 2025",
-      "technologies": ["AI/ML", "Python", "Flask", "JIRA", "Agile", "UI/UX Design", "Market Research"], 
-      "challenges": "Detail the specific challenges encountered during the project (e.g., integrating diverse AI models, ensuring data privacy, user adoption hurdles).",
-      "learnings": "Outline key takeaways and skills gained (e.g., refining AI prompt engineering, cross-functional team leadership in an agile environment, validating product-market fit).",
+      "technologies": ["Figma", "User Research", "Journey Mapping", "JIRA", "Agile Methodology", "Stakeholder Interviews", "Competitive Analysis", "Product Roadmapping", "KPI Definition", "Prompt Engineering"],
+      "challenges": "Integrated diverse AI models (summarization, citation, plagiarism detection) while maintaining a seamless user experience. Addressed data privacy concerns due to the sensitive nature of academic content. Overcame low user adoption in early prototypes through iterative onboarding design and feedback loops with target students.",
+      "learnings": "Sharpened AI prompt engineering skills, especially in summarization and citation generation. Gained hands-on experience leading agile teams, coordinating across design, engineering, and research stakeholders. Learned how to validate product-market fit through rapid prototyping, student testing, and academic advisor interviews.",
       "slideshow_title": "Nexus AI Presentation", 
       "slideshow_images": [
         "/static/project_files/nexus-ai/slides/nexus-ai-slide-01.png",
