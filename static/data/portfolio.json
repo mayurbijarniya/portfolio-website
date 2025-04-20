@@ -16,7 +16,31 @@
         {"name": "Engagement", "value": "50%"},
         {"name": "Journal Acceptance Rate", "value": "↑30—50%"}
       ],
-      "details": "Full project details would go here..."
+      "details": {
+      "long_description": "Engineered an AI platform automating research workflows including literature reviews, citation formatting, and plagiarism checks. Outlined roadmap, KPIs, and user requirements based on stakeholder interviews and academic pain points. Led cross-functional delivery through agile sprints in JIRA; documented specs for timely development. Formulated go-to-market strategy in a $112B AI-education market, projecting 30–50% efficiency gains.", 
+      "role": "Product Manager, UI/UX Designer",
+      "location": "Boston, MA",
+      "date": "Feb 2025 - Mar 2025",
+      "technologies": ["AI/ML", "Python", "Flask", "JIRA", "Agile", "UI/UX Design", "Market Research"], 
+      "challenges": "Detail the specific challenges encountered during the project (e.g., integrating diverse AI models, ensuring data privacy, user adoption hurdles).",
+      "learnings": "Outline key takeaways and skills gained (e.g., refining AI prompt engineering, cross-functional team leadership in an agile environment, validating product-market fit).",
+      "slideshow_title": "Nexus AI Presentation", 
+      "slideshow_images": [
+        "/static/project_files/nexus-ai/slides/nexus-ai-slide-01.png",
+        "/static/project_files/nexus-ai/slides/nexus-ai-slide-02.png",
+        "/static/project_files/nexus-ai/slides/nexus-ai-slide-03.png",
+        "/static/project_files/nexus-ai/slides/nexus-ai-slide-04.png",
+        "/static/project_files/nexus-ai/slides/nexus-ai-slide-05.png",
+        "/static/project_files/nexus-ai/slides/nexus-ai-slide-06.png",
+        "/static/project_files/nexus-ai/slides/nexus-ai-slide-07.png",
+        "/static/project_files/nexus-ai/slides/nexus-ai-slide-08.png",
+        "/static/project_files/nexus-ai/slides/nexus-ai-slide-09.png",
+        "/static/project_files/nexus-ai/slides/nexus-ai-slide-10.png",
+        "/static/project_files/nexus-ai/slides/nexus-ai-slide-11.png",
+        "/static/project_files/nexus-ai/slides/nexus-ai-slide-12.png"
+      ],
+      "document_pdf_path": null 
+    }
     },
     {
       "id": "huskyshare",
