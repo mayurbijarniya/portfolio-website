@@ -639,10 +639,10 @@ footer a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-body.dark-mode .project-btn {
+/*body.dark-mode .project-btn {
     background-color: #bbb;
-    color: #121212 !important; /* Force dark text */
-}
+    color: #121212 !important;  Force dark text 
+}*/
 
 body.dark-mode .project-btn:hover {
     background-color: #ddd;
