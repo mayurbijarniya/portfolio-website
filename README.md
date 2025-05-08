@@ -1,6 +1,6 @@
 # Python Portfolio Website
 
-A clean, modern portfolio website built with Flask to showcase your projects and skills using JON for data management.
+A clean, modern portfolio website built with Flask to showcase your projects and skills using JSON for data management.
 
 ## Features
 
